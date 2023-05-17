@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.navbar_container {
+  background-color: #242327;
+  position: fixed;
+  top: 0;
+  height: 57px;
+  width: 100%;
+  z-index: 9999;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 63%;
+  transition: 0.4s ease-in-out;
+  margin: -1px auto 0 auto;
+}
+
+.navbar h3 {
+  font-family: "Nunito";
+  justify-self: start;
+  align-items: center;
+  margin: 0;
+  color: #A24C4E;
+  font-size: 1rem;
+  transition: 0.4s ease-in-out;
+}
+
+.navbar_scrolled {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 63%;
+  margin: 5px auto 0 auto;
+  transition: 0.4s ease-in-out;
+}
+
+.navbar_scrolled h3 {
+  font-family: "Nunito";
+  justify-self: start;
+  align-items: center;
+  margin: 0;
+  color: #A24C4E;
+  font-size: 1.5rem;
+  transition: 0.4s ease-in-out;
+}
+
+
+/*sections*/
+
+.navbar_items {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  padding-top: 10px;
+}
+
+.navbar_sections_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.active.navbar_section,.navbar_section{
+  cursor: pointer;
+}
+.active.navbar_section:hover,.navbar_section:hover{
+  color: #fff;
+}
+
+.navbar_sections_container a {
+  font-family: "Nunito";
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+
+  padding: 0 20px;
+  font-size: 18px;
+  opacity: 0.51;
+}
+
+.navbar_section {
+  opacity: 0.8;
+  color: #fff;
+}
+
+.active.navbar_section {
+  opacity: 1;
+  color: #fff;
+}
+
+.navbar_sections_container a h2 {
+  font-size: 1.3rem;
+}

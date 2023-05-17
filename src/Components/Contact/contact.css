@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.divider-contact {
+
+    padding-top: 15%;
+    margin-top: -15.9%;
+    background-color: #242327;
+    z-index: 2;
+    content: "";
+    width: 100%;
+    height: auto;
+    -webkit-clip-path: polygon(0, 0% 100%, 100% 0);
+    clip-path: polygon(100% 100%, 0 100%, 0% 0);
+}
+
+
+
+
+.contact-container {
+    background-color: #242327;
+    padding: 0 0 5rem 0;
+}
+
+.contact-section {
+    margin: 0 auto;
+    width: 61%;
+    display: flex;
+}
+
+
+.contact-side {
+    z-index: 5;
+    width: 45%;
+    margin: -4rem 3% 0 0;
+}
+
+.contact-side h2 {
+    font-family: 'Nunito';
+    color: rgb(23, 122, 122);
+    font-size: 3.5rem;
+    padding-top: 2.5rem;
+}
+
+.contact-side p {
+    font-family: 'Montserrat';
+    color: #a19c9c;
+    font-size: 1.2rem;
+    padding-top: 5px;
+}
+
+.contact-side .contact-links {
+    margin-top: 2rem;
+    margin-left: 5%;
+}
+
+
+.contact-links p {
+    cursor: pointer;
+    display: inline;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 5px 15px;
+    color: #000000;
+    opacity: 0.6;
+}
+.contact-links p:hover {
+    transition: 0.2s ease-in-out;
+    opacity: 0.8;
+}
+
+.contact-side .contact-links img {
+    width: 45px;
+    margin-left: 20px;
+    margin-top: -0.5rem;
+    opacity: 0.6;
+
+    height: auto;
+    display: inline;
+}
+
+.contact-side .contact-links img:hover {
+    transform: scale(1.15);
+    transition: 0.2s ease-in-out;
+    opacity: 0.8;
+}

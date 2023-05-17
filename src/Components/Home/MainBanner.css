@@ -1,0 +1,128 @@
+.home_divider {
+    padding-bottom: 10%;
+    margin-bottom: -12.4%;
+    background-color: #242327;
+    z-index: 5;
+    content: "";
+    height: 15rem;
+    width: auto;
+    clip-path: polygon(100% 0%, 31.6% 97.1%, 30.4% 98.6%, 29.5% 99.5%, 28.5% 99.5%, 27.7% 98.6%, 26.8% 96.7%, 25.8% 93.3%, 0% 0%);
+
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+.home_content {
+    background-color: #242327;
+    padding: 16rem 0 6rem 0;
+}
+
+.home_data {
+    display: grid;
+    margin: 0 auto 0 auto;
+    padding-right: 30%;
+    width: 61%;
+}
+
+.home_data p {
+    color: #b8b8b8;
+    z-index: 2;
+    font-size: 1.7rem;
+}
+
+.home_data h1 {
+    color: #A24C4E;
+    font-size: 5.7rem;
+    font-family: 'Nunito';
+    z-index: 2;
+    mix-blend-mode: difference;
+    margin: -10px 0 -2px 0;
+}
+
+.home_data h2 {
+    color: #fff;
+    font-size: 3rem;
+    z-index: 2;
+    display: flex;
+}
+
+
+
+/* scroll animation*/
+
+.scroll_icon {
+    width: 45px;
+    height: 70px;
+    border: #fff solid 2px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+    top: 280px;
+    left: 27.5%;
+}
+
+.scroll_icon span {
+    background-color: #fff;
+    width: 5px;
+    height: 10px;
+    border-radius: 30px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.scroll_icon span::before {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    transform: translateY(-10px) rotate(135deg);
+    left: -6px;
+    margin-top: 10px;
+    opacity: 0;
+    animation: ani 1.8s infinite linear;
+}
+
+
+.scroll_icon span::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    transform: translateY(-10px) rotate(135deg);
+    left: -6px;
+    margin-top: 10px;
+    opacity: 0;
+
+    animation: ani 1.8s infinite linear;
+    animation-delay: 0.8s;
+}
+
+@keyframes ani {
+    0% {
+        margin-top: 10px;
+        opacity: 0;
+    }
+
+    50% {
+        margin-top: 25px;
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: 40px;
+        opacity: 0;
+    }
+}
+
+

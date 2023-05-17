@@ -1,0 +1,234 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.projects-container{
+    padding: 7rem 0 30rem 0;
+
+
+    background-color: #282e40;
+    opacity: 1;
+    background-image:  linear-gradient(30deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(150deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(30deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(150deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(60deg, #00000077 25%, transparent 25.5%, transparent 75%, #00000077 75%, #00000077), linear-gradient(60deg, #00000077 25%, transparent 25.5%, transparent 75%, #00000077 75%, #00000077);
+    background-size: 66px 116px;
+    background-position: 0 0, 0 0, 33px 58px, 33px 58px, 0 0, 33px 58px;
+
+
+    background-attachment: fixed;
+}
+.projects-section{
+  padding-top: 7rem;
+  margin: 0 auto;
+  width: 61%;
+}
+.proj-header{
+  padding-right: 3%;
+}
+.proj-header h2{
+  font-family: "Nunito";
+  text-align: end;
+    color: #e3e1e3;
+    font-size: 5rem;
+}
+.proj-header p{
+  font-family: "Montserrat";
+  text-align: end;
+    color: #e3e1e3;
+    font-size: 1.3rem;
+}
+
+
+
+.projects-container .projectos{
+    margin: 0 auto;
+    padding-top: 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(370px,1fr));
+    grid-column-gap:1.5rem;
+    grid-row-gap: 2.4rem;
+}
+
+
+
+
+
+/*image hover*/
+.proj-card {
+    position: relative;
+    overflow: hidden;
+    background-color: #000000;
+    border-radius: 1rem;
+    cursor: pointer;
+    
+  }
+
+
+  .proj-card:hover{
+    transform:scale(1.05);
+    transition: all 0.35s ease;
+  }
+
+  .proj-card *,
+  .proj-card *:before,
+  .proj-card *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+
+  .proj-card img {
+    border-radius: 1rem;
+    position: relative;
+    max-width: 100%;
+    backface-visibility: hidden;
+    vertical-align: top;
+    opacity: 1;
+  }
+
+  .proj-card:hover img{
+    filter: alpha(opacity=35);
+    -webkit-opacity: 0.25;
+    opacity: 0.25;
+  }
+  .proj-card h4 {
+    display: block;
+    font-weight: 700;
+    font-size: 1.3rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 5px 7px;
+    color: #000000;
+    font-family: "Nunito";
+  }
+
+
+  .proj-card .proj-card-title {
+    position: absolute;
+    bottom: 13%;
+    left: 10%;
+    padding: 10px 10px 2px 10px;
+  }
+  .proj-card .proj-card-title:before,
+  .proj-card .proj-card-title:after {
+    height: 3px;
+  width: 500px;
+  position: absolute;
+  content: '';
+  background-color: #ffffff;
+}
+.proj-card .proj-card-title:before {
+    top: 0;
+    left: 10px;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  .proj-card .proj-card-title:after {
+    bottom: 0;
+    right: 10px;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  .proj-card .proj-card-title div:before,
+  .proj-card .proj-card-title div:after {
+    width: 3px;
+    height: 500px;
+    position: absolute;
+    content: '';
+    background-color: #ffffff;
+  }
+  .proj-card .proj-card-title div:before {
+    top: 10px;
+    right: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  .proj-card .proj-card-title div:after {
+    bottom: 10px;
+    left: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+
+
+  .proj-card .proj-info {
+    
+    position: absolute;
+    bottom: 35%;
+    left: 12%;
+    text-align: left;
+    opacity: 0;
+    padding: 5px 60px 5px 10px;
+    color: #e3e1e3;
+    font-size: 0.8em;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+  }
+  .proj-card .proj-info p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: "Nunito";
+  }
+  .proj-card a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .proj-card:hover .proj-card-title:before,
+  .proj-card:hover .proj-card-title:after,
+  .proj-card:hover .proj-card-title div:before,
+  .proj-card:hover .proj-card-title div:after {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.proj-card:hover .proj-card-title:before,
+.proj-card:hover .proj-card-title:after{
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+.proj-card:hover .proj-info {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+
+
+
+
+
+
+
+/*filter buttons*/
+.filter-container{
+    margin: 0 auto;
+    width: 61%;
+    display: flex;
+    justify-content: center;
+}
+
+.filter-container button{
+  font-family: "Montserrat";
+    margin-right: 2rem;
+    min-width: 5rem;
+    padding: 0.2rem 1rem;
+    border: none;
+    background: #e3e1e3;
+    color: #242327;
+    border-radius: 1rem;
+    border: 2px solid #242327;
+    font-weight: bold;
+    cursor: pointer;
+}
+.filter-container button:hover{
+    transform: scale(1.08);
+}
+.filter-container button:active{
+    background: #242327;
+    color: #e3e1e3;
+}
+
