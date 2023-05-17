@@ -31,6 +31,7 @@
     color: #b8b8b8;
     z-index: 2;
     font-size: 1.7rem;
+    margin-left: -70%;
 }
 
 .home_data h1 {
@@ -39,7 +40,7 @@
     font-family: 'Nunito';
     z-index: 2;
     mix-blend-mode: difference;
-    margin: -10px 0 -2px 0;
+    margin: -10px 0 -2px -5%;
 }
 
 .home_data h2 {

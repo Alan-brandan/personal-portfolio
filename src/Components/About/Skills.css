@@ -18,21 +18,15 @@
 }
 
 .skills-titles{
-margin: 0 20% 2rem 21%;
+    display: flex;
+    justify-content:space-between;
+    margin: 0 25% 2rem 20%;
 
 }
 .skills-titles h2{
-    display: inline;
     color: #555555;
     font-family: 'Montserrat';
 }
-.skills-titles h2.first-title{
-    padding-right: 16.5%;
-}
-.skills-titles h2.second-title{
-    padding-right: 19.5%;
-}
-
 
 .skills-container {
     
