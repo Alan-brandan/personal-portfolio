@@ -29,10 +29,8 @@
 }
 
 .skills-container {
-    
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     width: 61%;
-
     padding-bottom: 3rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -40,28 +38,15 @@
 }
 
 .skills-container h2{
-    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+    margin-bottom: 2rem;
     color: rgb(141, 141, 141);
 }
 
-.skills-container .web {
-
-    display: grid;
-    grid-template-columns: repeat(3, 50px);
-    grid-column-gap: 50px;
-    grid-template-rows: repeat(4, 60px);
-    grid-row-gap: 80px;
-}
-
-.skills-container .soft {
-    display: grid;
-    grid-template-columns: repeat(3, 50px);
-    grid-column-gap: 50px;
-    grid-template-rows: repeat(4, 60px);
-    grid-row-gap: 80px;
-}
-
-.skills-container .design {
+.skills-container .web, .skills-container .soft, .skills-container .design {
+    justify-content: center;
     display: grid;
     grid-template-columns: repeat(3, 50px);
     grid-column-gap: 50px;
@@ -72,22 +57,14 @@
 .skills-container h3{
     margin-top: 5px;
     font-size: 1.1rem;
-
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Montserrat';
     width: 100%;
-    padding-left: auto;
-    padding-right: auto;
-
+    display: flex;
+    justify-content: center;
 }
 
 .skills-container img {
-
-    display: block;
     cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
     width: clamp(40px,117%,70px);
     -webkit-filter: drop-shadow(0px 0px 20px #3D3D3D);
     filter: drop-shadow(-2px 5px 5px #7a7a7a);
@@ -207,11 +184,11 @@ h2.skills-spacer span:after{
 
 /*tooltip*/
 
-.skills-container div div{
+.web div, .soft div, .design div{
     position:relative;
 }
 
-.skills-container div div::before,.skills-container div div::after{
+.web div::before, .soft div::before, .design div::before,.web div::after, .soft div::after, .design div::after{
     --scale:0;
     --tooltip-bg-color: #242327;
     position:absolute;
@@ -224,7 +201,7 @@ h2.skills-spacer span:after{
     -webkit-box-shadow: 0px -1px 20px 0px rgba(0,0,0,0.66);
     -moz-box-shadow: 0px -1px 20px 0px rgba(0,0,0,0.66);
 }
-.skills-container div div::before{
+.web div::before, .soft div::before, .design div::before{
     content: attr(data-tooltip);
     width: max-content;
     color: #93b1cc;
@@ -234,19 +211,23 @@ h2.skills-spacer span:after{
     background: var(--tooltip-bg-color);
 
 }
-
-.skills-container div div:hover::before,.skills-container div div:hover::after{
+.web div:hover::before, .soft div:hover::before, .design div:hover::before,.web div:hover::after, .soft div:hover::after, .design div:hover::after{
     --scale:1;
     transition: 0.1s ease-in-out;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
     .skills-container {
         width: 80%;
-        padding-bottom: 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        grid-row-gap: 5%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: -12rem;
+    }
+    .skills-container .web, .skills-container .soft, .skills-container .design {
+        grid-template-columns: repeat(3, 70px);
+        grid-row-gap: 80px;
+    }
+    .skills-container .web{
+        margin-bottom: 8rem;
     }
   }
