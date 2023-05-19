@@ -1,11 +1,13 @@
 .home_divider {
-    padding-bottom: 10%;
-    margin-bottom: -12.4%;
+    padding-bottom: 12%;
+    margin-bottom: -12.5%;
     background-color: #242327;
     z-index: 5;
     content: "";
     height: 15rem;
-    width: auto;
+    width: 100%;
+    position: absolute;
+    top: 15.25%;
     clip-path: polygon(100% 0%, 31.6% 97.1%, 30.4% 98.6%, 29.5% 99.5%, 28.5% 99.5%, 27.7% 98.6%, 26.8% 96.7%, 25.8% 93.3%, 0% 0%);
 
 

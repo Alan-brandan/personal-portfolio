@@ -38,8 +38,9 @@
 
 .about-pic {
   margin-top: 11%;
-  width: clamp(250px,100%,700px);
-  height: 100%;
+max-width: 450px;
+height: 100%;
+  justify-content: center;
 }
 
 

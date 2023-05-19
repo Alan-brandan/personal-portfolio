@@ -237,7 +237,7 @@ h2.skills-spacer span:after{
 
 .skills-container div div:hover::before,.skills-container div div:hover::after{
     --scale:1;
-
+    transition: 0.1s ease-in-out;
 }
 
 @media (max-width: 600px) {
