@@ -99,3 +99,20 @@
 .navbar_sections_container a h2 {
   font-size: 1.3rem;
 }
+
+@media (max-width: 600px) {
+  .navbar_container {
+    position: sticky;
+    top: 0;
+    height: 40px;
+    width: 100%;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    width: 80%;
+  }
+}

@@ -16,9 +16,10 @@
 }
 
 .contact-form label{
-    display: inline;
+    display: flex;
     color: #e3e1e3;
     font-size: 1.1rem;
+    padding-left: 5px;
     
 }
 
@@ -41,6 +42,11 @@
     outline: none;
 }
 
+input:-webkit-autofill {
+    -webkit-text-fill-color: rgb(23, 143, 143);
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 50px #242327 inset;
+}
 
 .contact-form .form-name .icon{
     position: relative;
@@ -58,6 +64,8 @@
     padding: 5px 15px 5px 30px;
     width: 100%;
     height: 9rem;
+    min-height: 9rem;
+    max-height: 12rem;
     border-radius: 18px;
     margin-bottom: 10px;
     border: none;
@@ -227,3 +235,34 @@
     position: absolute;
     z-index: -1;
 }
+
+@media (max-width: 600px) {
+    .form_container{
+        margin-top: 2rem;
+        margin-left: 0;
+        width:100%;
+    }
+    .contact-form{
+        padding: 1.6rem 8% 1.2rem 8%;
+    }
+    .contact-form .form-name input,.contact-form .form-email input, .contact-form textarea{
+        margin-top: 5px;
+        margin-bottom: 5%;
+        font-size: 1rem;
+    }
+  }
+  @media (min-device-width: 601px) and (max-width: 1200px) {
+    .form_container{
+        margin-top: 2rem;
+        margin-left: 0;
+        width:100%;
+    }
+    .contact-form{
+        padding: 1.6rem 8% 1.2rem 8%;
+    }
+    .contact-form .form-name input,.contact-form .form-email input, .contact-form textarea{
+        margin-top: 5px;
+        margin-bottom: 5%;
+        font-size: 1.1rem;
+    }
+  }

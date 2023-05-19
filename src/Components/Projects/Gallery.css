@@ -5,13 +5,11 @@
 .projects-container{
     padding: 7rem 0 30rem 0;
 
-
     background-color: #282e40;
     opacity: 1;
     background-image:  linear-gradient(30deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(150deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(30deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(150deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(60deg, #00000077 25%, transparent 25.5%, transparent 75%, #00000077 75%, #00000077), linear-gradient(60deg, #00000077 25%, transparent 25.5%, transparent 75%, #00000077 75%, #00000077);
     background-size: 66px 116px;
     background-position: 0 0, 0 0, 33px 58px, 33px 58px, 0 0, 33px 58px;
-
 
     background-attachment: fixed;
 }
@@ -59,7 +57,7 @@
     background-color: #000000;
     border-radius: 1rem;
     cursor: pointer;
-    
+    width: clamp(200px,100%,700px);
   }
 
 
@@ -81,6 +79,7 @@
     border-radius: 1rem;
     position: relative;
     max-width: 100%;
+    /*width: clamp(200px,100%,700px);*/
     backface-visibility: hidden;
     vertical-align: top;
     opacity: 1;
@@ -153,7 +152,6 @@
 
 
   .proj-card .proj-info {
-    
     position: absolute;
     bottom: 35%;
     left: 12%;
@@ -232,3 +230,26 @@
     color: #e3e1e3;
 }
 
+@media (max-width: 600px) {
+  .proj-header h2{
+    text-align: center;
+      font-size: 4.5rem;
+  }
+  .proj-header p{
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .projects-container{
+  padding: 0 0 10rem 0;
+}
+.projects-section{
+  width: 80%;
+}
+.proj-card {
+  width: clamp(200px,80%,700px);
+}
+.filter-container{
+  width: 80%;
+  justify-content: center;
+}
+}

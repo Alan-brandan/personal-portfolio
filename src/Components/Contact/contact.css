@@ -49,15 +49,19 @@
     padding-top: 5px;
 }
 
-.contact-side .contact-links {
+.contact-links {
     margin-top: 2rem;
-    margin-left: 5%;
+    display: flex;
+    padding: 0 8%;
+    justify-content: center;
 }
 
 
 .contact-links p {
+    position:relative;
     cursor: pointer;
     display: inline;
+    min-width: 300px;
     background-color: #ffffff;
     border-radius: 1rem;
     padding: 5px 15px;
@@ -69,14 +73,17 @@
     opacity: 0.8;
 }
 
+.contact-links .contact-icons{
+    display: flex;
+    justify-content: center;
+}
+
 .contact-side .contact-links img {
+    min-width: 0;
     width: 45px;
     margin-left: 20px;
-    margin-top: -0.5rem;
+    margin-top: -0.2rem;
     opacity: 0.6;
-
-    height: auto;
-    display: inline;
 }
 
 .contact-side .contact-links img:hover {
@@ -84,3 +91,90 @@
     transition: 0.2s ease-in-out;
     opacity: 0.8;
 }
+
+/*tooltip*/
+
+.contact-links p::before,.contact-links p::after{
+    --scale:0;
+    --tooltip-bg-color: #333333;
+    position:absolute;
+    top: 5.5rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+    transition: 50ms transform;
+    transform-origin: bottom center;
+    box-shadow: 0px -1px 20px 0px rgba(0,0,0,0.66);
+    -webkit-box-shadow: 0px -1px 20px 0px rgba(0,0,0,0.66);
+    -moz-box-shadow: 0px -1px 20px 0px rgba(0,0,0,0.66);
+}
+.contact-links p::before{
+    content: attr(data-tooltip);
+    width: max-content;
+    color: #93b1cc;
+    border-radius: .3rem;
+    text-align: center;
+    padding: .5rem;
+    background: var(--tooltip-bg-color);
+
+}
+.contact-links p:hover::before,.contact-links p:hover::after{
+    --scale:1;
+
+}
+
+
+@media (max-width: 600px) {
+    .contact-container {
+        width: 100%;
+    }
+    .contact-section {
+      flex-direction: column;
+      width: 80%;
+    }
+    .contact-side {
+        width: 100%;
+        margin: 1rem 3% 0 0;
+    }
+    .contact-side h2 {
+        font-size: 3.5rem;
+        padding-top: 2.5rem;
+    }
+    .contact-side p {
+        font-size: 1.1rem;
+        padding-top: 5px;
+    }
+    .contact-side .contact-links {
+        flex-direction: column;
+        padding: 0;
+    }
+    .contact-links p {
+        font-size: 100%;
+        opacity: 0.7;
+    }
+  }
+  @media (min-device-width: 601px) and (max-width: 1200px) {
+    .contact-section {
+      flex-direction: column;
+      width: 70%;
+    }
+    .contact-side {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .contact-side h2 {
+        font-size: 3.7rem;
+        padding-top: 2.5rem;
+    }
+    .contact-side p {
+        font-size: 1.2rem;
+        padding-top: 5px;
+    }
+    .contact-side .contact-links {
+        justify-content: center;
+        padding: 0;
+    }
+    .contact-links p {
+        font-size: 100%;
+        opacity: 0.7;
+    }
+  }

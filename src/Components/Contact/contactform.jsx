@@ -51,7 +51,7 @@ export const ContactForm = () => {
         </div>
         <div className='form-email'>
           <label >Email </label>
-          <input type="email" name="user_email" required placeholder='And your email adress?' />
+          <input type="email" name="user_email"  required placeholder='And your email adress?' />
         </div>
         <div className='form-message'>
           <label >Message </label>

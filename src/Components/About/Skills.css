@@ -69,11 +69,6 @@
     grid-row-gap: 80px;
 }
 
-
-.skills-container div div{
-    width: 70px;
-}
-
 .skills-container h3{
     margin-top: 5px;
     font-size: 1.1rem;
@@ -93,8 +88,7 @@
     cursor: pointer;
     margin-left: auto;
     margin-right: auto;
-    width: 70px;
-    height: auto;
+    width: clamp(40px,115%,70px);
     -webkit-filter: drop-shadow(0px 0px 20px #3D3D3D);
     filter: drop-shadow(-2px 5px 5px #7a7a7a);
 }
@@ -246,4 +240,13 @@ h2.skills-spacer span:after{
 
 }
 
-
+@media (max-width: 600px) {
+    .skills-container {
+        width: 80%;
+        padding-bottom: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-row-gap: 5%;
+    }
+  }

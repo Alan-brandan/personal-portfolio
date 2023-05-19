@@ -19,12 +19,14 @@ const Contact = () => {
             <p>If you have any questions about me or my projects, fill out the form and i’ll be in touch as soon as possible.</p>
             <div className='contact-links'>
 
-              <CopyToClipboard text="alanbrandan17@hotmail.com">
+              <CopyToClipboard text="alanbrandan17@hotmail.com" data-tooltip="Copy to clipboard">
                 <p>alanbrandan17@hotmail.com</p>
               </CopyToClipboard>
 
-              <a href="https://www.linkedin.com/in/alan-brandan/" target='_blank' ><img src={linkedinimg} alt="linkedin_icon" /></a>
-              <a href="https://github.com/Alan-brandan" target='_blank' ><img src={githubimg} alt="github_icon" /></a>
+              <div className='contact-icons'>
+                <a href="https://www.linkedin.com/in/alan-brandan/" target='_blank' ><img src={linkedinimg} alt="linkedin_icon" /></a>
+                <a href="https://github.com/Alan-brandan" target='_blank' ><img src={githubimg} alt="github_icon" /></a>
+              </div>
             </div>
           </div>
           <ContactForm />
