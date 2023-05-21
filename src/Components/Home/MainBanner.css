@@ -2,12 +2,10 @@
     padding-bottom: 12%;
     margin-bottom: -12.5%;
     background-color: #242327;
-    z-index: 5;
+    z-index: 2;
     content: "";
-    height: 15rem;
+    height: auto;
     width: 100%;
-    position: absolute;
-    top: 15.25%;
     clip-path: polygon(100% 0%, 31.6% 97.1%, 30.4% 98.6%, 29.5% 99.5%, 28.5% 99.5%, 27.7% 98.6%, 26.8% 96.7%, 25.8% 93.3%, 0% 0%);
 
 
@@ -23,9 +21,10 @@
 }
 
 .home_data {
-    display: grid;
-    margin: 0 auto 0 auto;
-    padding-right: 30%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin: 0 auto;
     width: 61%;
 }
 
@@ -33,7 +32,6 @@
     color: #b8b8b8;
     z-index: 2;
     font-size: 1.7rem;
-    margin-left: -70%;
 }
 
 .home_data h1 {
@@ -41,8 +39,7 @@
     font-size: 5.7rem;
     font-family: 'Nunito';
     z-index: 2;
-    mix-blend-mode: difference;
-    margin: -10px 0 -2px -5%;
+    margin: -1rem 0;
 }
 
 .home_data h2 {
@@ -131,20 +128,6 @@
 }
 
 @media (max-width: 600px) {
-    .home_data p {
-        font-size: 1.3rem;
-        margin-left: 0;
-    }
-    
-    .home_data h1 {
-        font-size: 5rem;
-        margin-left: 0;
-    }
-    
-    .home_data h2 {
-        font-size: 1.7rem;
-        margin-left: 0;
-    }
     .home_divider {
         padding-bottom: 5%;
         margin-bottom: -28.5%;
@@ -161,6 +144,20 @@
     
     .home_data {
         width: 80%;
-        margin-left: 0;
+        margin:0;
+        margin-left: 10%;
+    }
+    .home_data p {
+        font-size: 1.2rem;
+    }
+    
+    .home_data h1 {
+        font-size: 4.5rem;
+        line-height: 4.3rem;
+    }
+    
+    .home_data h2 {
+        font-size: 1.5rem;
+        top: 5.5%;
     }
   }

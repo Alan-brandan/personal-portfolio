@@ -48,8 +48,8 @@ function App() {
       <AboutBanner ref={aboutRef}/>
       <Skills ref={skillsRef}/>
       <Gallery categories={categories} filterItems={filterItems} items={menuItems} ref={projectsRef}/>
-      <Contact />
-      <Footer ref={contactRef}/>
+      <Contact ref={contactRef} />
+      <Footer/>
 
 
 

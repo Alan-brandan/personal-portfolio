@@ -1,18 +1,17 @@
-import React from 'react'
+import React,{forwardRef} from 'react'
 import './contact.css';
 import githubimg from "../../assets/img/github.png"
 import linkedinimg from "../../assets/img/linkedin.png"
 import ContactForm from './contactform';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
-const Contact = () => {
+const Contact = (props,ref) => {
 
   return (
     <div>
       <div className='divider-contact'></div>
 
-
-      <div className='contact-container'>
+      <div className='contact-container' ref={ref}>
         <div className='contact-section'>
           <div className='contact-side'>
             <h2>Get In Touch</h2>
@@ -36,4 +35,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default forwardRef(Contact)

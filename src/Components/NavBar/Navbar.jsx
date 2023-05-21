@@ -29,7 +29,7 @@ const Navbar = ({ homRef, projRef, abouRef,skiRef, contRef }) => {
                 else if (visibleSection.className === 'About-content') { onUpdateActiveSection("about") }
                 else if (visibleSection.className === 'skill-container') { onUpdateActiveSection("skills") }
                 else if (visibleSection.className === 'projects-section') { onUpdateActiveSection("projects") }
-                else if (visibleSection.className === 'footer-container') { onUpdateActiveSection("contact") }
+                else if (visibleSection.className === 'contact-container') { onUpdateActiveSection("contact") }
             }
         });
 
