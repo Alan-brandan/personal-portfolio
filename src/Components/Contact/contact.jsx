@@ -18,7 +18,7 @@ const Contact = (props,ref) => {
             <p>If you have any questions about me or my projects, fill out the form and i’ll be in touch as soon as possible.</p>
             <div className='contact-links'>
 
-              <CopyToClipboard text="alanbrandan17@hotmail.com" data-tooltip="Copy to clipboard">
+              <CopyToClipboard text="alan.brandan@yahoo.com" data-tooltip="Copy to clipboard">
                 <p>alanbrandan17@hotmail.com</p>
               </CopyToClipboard>
 

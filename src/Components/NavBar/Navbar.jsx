@@ -1,7 +1,7 @@
 import { React, useState, useEffect, useRef } from "react";
 import './Navbar.css';
 
-const Navbar = ({ homRef, projRef, abouRef,skiRef, contRef }) => {
+const Navbar = ({ homRef, projRef, abouRef, skiRef, contRef }) => {
 
     const home = useRef(null);
 
@@ -33,7 +33,7 @@ const Navbar = ({ homRef, projRef, abouRef,skiRef, contRef }) => {
             }
         });
 
-        const sections = [homRef.current, abouRef.current,skiRef.current, projRef.current, contRef.current];
+        const sections = [homRef.current, abouRef.current, skiRef.current, projRef.current, contRef.current];
 
         sections.forEach((section) => {
             observer.current.observe(section);
@@ -50,9 +50,6 @@ const Navbar = ({ homRef, projRef, abouRef,skiRef, contRef }) => {
             if (window.scrollY > 100) { setScrolled(true); setName('Alan Brandan'); }
             else { setScrolled(false); setName(' '); }
 
-
-
-
         }
 
         window.addEventListener("scroll", onScroll);
@@ -68,13 +65,9 @@ const Navbar = ({ homRef, projRef, abouRef,skiRef, contRef }) => {
     return (
         <div className="navbar_container" >
             <div className={scrolled ? "navbar_scrolled" : "navbar"} >
-
                 <h3>{name}</h3>
 
                 <div className="navbar_items">
-
-
-
                     <div className="navbar_sections_container">
                         <a className={activeSection === "home" ? "active navbar_section" : "navbar_section"}
                             onClick={() => { onUpdateActiveSection("home"); scrollToSection(homRef); }}><h2>Home</h2> </a>
@@ -87,11 +80,8 @@ const Navbar = ({ homRef, projRef, abouRef,skiRef, contRef }) => {
                         <a className={activeSection === "contact" ? "active navbar_section" : "navbar_section"}
                             onClick={() => { onUpdateActiveSection("contact"); scrollToSection(contRef); }}><h2>Contact</h2></a>
                     </div>
-
                     <div className="lang_toggle">
-
                     </div>
-
                 </div>
             </div>
         </div>

@@ -14,7 +14,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-
+.header-container{
+    position: relative;
+}
 .home_content {
     background-color: #242327;
     padding: 16rem 0 11rem 0;
@@ -40,6 +42,7 @@
     font-family: 'Nunito';
     z-index: 2;
     margin: -1rem 0;
+    padding-bottom: 5rem;
 }
 
 .home_data h2 {
@@ -48,10 +51,12 @@
     z-index: 2;
     display: flex;
     position: absolute;
-    top: 10%;
+    top: 50%;
 }
 
-
+.home-items{
+    position: relative;
+}
 
 /* scroll animation*/
 
@@ -62,10 +67,10 @@
     border-radius: 30px;
     display: flex;
     justify-content: center;
-    position: relative;
+    position: absolute;
     z-index: 5;
-    top: 350px;
-    left: 27.5%;
+    top: 85%;
+    left: 28%;
 }
 
 .scroll_icon span {
@@ -127,21 +132,15 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 620px) {
     .home_divider {
         padding-bottom: 5%;
-        margin-bottom: -28.5%;
-        height: 7rem;
-    }
-    .scroll_icon {
-        top: 140px;
-        left: 25%;
+        margin-bottom: -31%;
+        height: 6rem;
     }
     .home_content {
-        background-color: #242327;
         padding: 6rem 0 5rem 0;
     }
-    
     .home_data {
         width: 80%;
         margin:0;
@@ -150,14 +149,44 @@
     .home_data p {
         font-size: 1.2rem;
     }
-    
     .home_data h1 {
         font-size: 4.5rem;
         line-height: 4.3rem;
     }
-    
     .home_data h2 {
         font-size: 1.5rem;
-        top: 5.5%;
+        top: 55%;
+    }
+    .scroll_icon {
+        top: 77%;
+        left: 24%;
+    }
+  }
+  @media (min-device-width: 621px) and (max-width: 1200px) {
+    .home_divider {
+        margin-bottom: -20%;
+        height: 8rem;
+    }
+    .home_content {
+        padding: 11rem 0 7rem 0;
+    }
+    .home_data {
+        width: 80%;
+    }
+    .home_data p {
+        font-size: 1.4rem;
+    }
+    .home_data h1 {
+        padding-top: 1rem;
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+    .home_data h2 {
+        font-size: 1.8rem;
+        top: 55%;
+    }
+    .scroll_icon {
+        top: 82%;
+        left: 26%;
     }
   }

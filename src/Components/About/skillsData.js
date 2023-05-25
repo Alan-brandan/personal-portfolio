@@ -43,12 +43,6 @@ const skills = [
         image: require("../../assets/img/icons/springboot.png")
     },
     {
-        title: 'Bootstrap',
-        category: "Web",
-        proficency: "1 Year of experience",
-        image: require("../../assets/img/icons/bootstrap.png")
-    },
-    {
         title: 'MySQL',
         category: "Web",
         proficency: "1 Year of experience",
@@ -98,12 +92,6 @@ const skills = [
         category: "Soft",
         proficency: "1 Year of experience",
         image: require("../../assets/img/icons/postman.png")
-    },
-    {
-        title: 'Docker',
-        category: "Soft",
-        proficency: "0.5 Years of experience",
-        image: require("../../assets/img/icons/docker.png")
     },
     {
         title: 'Swagger',
