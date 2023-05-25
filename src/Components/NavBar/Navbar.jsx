@@ -66,7 +66,12 @@ const Navbar = ({ homRef, projRef, abouRef, skiRef, contRef }) => {
         <div className="navbar_container" >
             <div className={scrolled ? "navbar_scrolled" : "navbar"} >
                 <h3>{name}</h3>
-
+                <input type="checkbox" className="navmenu-togle" id="navmenu-togle" />
+                <label htmlFor="navmenu-togle" className="navmenu-togle-label">
+                    <div className="navmenutogle-clickarea">
+                        <span></span>
+                    </div>
+                </label>
                 <div className="navbar_items">
                     <div className="navbar_sections_container">
                         <a className={activeSection === "home" ? "active navbar_section" : "navbar_section"}

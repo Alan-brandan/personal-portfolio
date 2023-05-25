@@ -1,6 +1,6 @@
 .home_divider {
     padding-bottom: 12%;
-    margin-bottom: -12.5%;
+    margin-bottom: -13%;
     background-color: #242327;
     z-index: 2;
     content: "";
@@ -135,7 +135,7 @@
 @media (max-width: 620px) {
     .home_divider {
         padding-bottom: 5%;
-        margin-bottom: -31%;
+        margin-bottom: -33%;
         height: 6rem;
     }
     .home_content {
@@ -164,7 +164,7 @@
   }
   @media (min-device-width: 621px) and (max-width: 1200px) {
     .home_divider {
-        margin-bottom: -20%;
+        margin-bottom: -21%;
         height: 8rem;
     }
     .home_content {
