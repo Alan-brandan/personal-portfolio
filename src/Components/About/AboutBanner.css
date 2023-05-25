@@ -80,7 +80,7 @@ height: 100%;
 
 @media (max-width: 600px) {
   .about-section {
-    padding: 8rem 0 5rem 0;
+    padding: 10rem 0 5rem 0;
   }
   .About-content {
     width: 80%;
@@ -115,7 +115,7 @@ height: 100%;
 }
 @media (min-device-width: 601px) and (max-width: 1200px) {
   .about-section {
-    padding: 8rem 0 5rem 0;
+    padding: 10rem 0 5rem 0;
   }
   .About-content {
     width: 70%;

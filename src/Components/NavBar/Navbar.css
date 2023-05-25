@@ -134,35 +134,6 @@ top: 17px;
   opacity: 1;
   color: #fff;
 }
-/*
-@media (max-width: 600px) {
-  .navbar_container {
-    position: sticky;
-    top: 0;
-    height: 40px;
-    width: 100%;
-  }
-
-  .navbar_sections_container {
-    width: 100%;
-    background-color: #A24C4E;
-  }
-  .navbar_sections_container a {
-    padding: 0 3%;
-    opacity: 0.51;
-  }
-  .navbar_sections_container a h2 {
-    font-size: 1.2rem;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-    width: 80%;
-  }
-}*/
 
 @media (max-width: 1199px) {
 
@@ -174,19 +145,19 @@ top: 17px;
 
   .navmenu-togle-label{
     left: 8%;
-    top: 2px;
+    top: 8px;
   }
   .navmenutogle-clickarea{
-    width: 43px;
-    height: 35px;
+    width: 50px;
+    height: 40px;
     position: absolute;
     left: 8%;
     top: 0;
   }
 
   .navmenu-togle-label span{
-    left: 13%;
-    top: 45%;
+    left: 18%;
+    top: 48%;
   }
 
   .navbar_items{
@@ -194,13 +165,13 @@ top: 17px;
     transform-origin: top;
     transition: transform 250ms ease-in-out;
     position: absolute;
-    top: 30px;
+    top: 47px;
     left: -15%;
   }
   .navbar_container {
     position: sticky;
     top: 0;
-    height: 40px;
+    height: 57px;
     width: 100%;
   }
 

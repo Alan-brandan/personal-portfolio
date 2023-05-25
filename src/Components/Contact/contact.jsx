@@ -19,7 +19,7 @@ const Contact = (props,ref) => {
             <div className='contact-links'>
 
               <CopyToClipboard text="alan.brandan@yahoo.com" data-tooltip="Copy to clipboard">
-                <p>alanbrandan17@hotmail.com</p>
+                <p>alan.brandan@yahoo.com</p>
               </CopyToClipboard>
 
               <div className='contact-icons'>
