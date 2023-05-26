@@ -24,7 +24,6 @@ const Navbar = ({ homRef, projRef, abouRef, skiRef, contRef }) => {
             const visibleSection = entries.find((entry) => entry.isIntersecting)?.target;
 
             if (visibleSection) {
-                console.log(visibleSection.className);
                 if (visibleSection.className === 'header-container') { onUpdateActiveSection("home") }
                 else if (visibleSection.className === 'About-content') { onUpdateActiveSection("about") }
                 else if (visibleSection.className === 'skill-container') { onUpdateActiveSection("skills") }
@@ -47,7 +46,7 @@ const Navbar = ({ homRef, projRef, abouRef, skiRef, contRef }) => {
 
     useEffect(() => {
         const onScroll = () => {
-            if (window.scrollY > 100) { setScrolled(true); setName('Alan Brandan'); }
+            if (window.scrollY > 300) { setScrolled(true); setName('Alan Brandan'); }
             else { setScrolled(false); setName(' '); }
 
         }

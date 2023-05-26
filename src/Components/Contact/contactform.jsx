@@ -2,7 +2,6 @@
 import React, { useRef, useState } from 'react';
 import './contactform.css';
 import emailjs from '@emailjs/browser';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { delay, motion } from "framer-motion";
 
 export const ContactForm = () => {
@@ -47,7 +46,6 @@ export const ContactForm = () => {
         <div className='form-name'>
           <label >Name </label>
           <input type="text" name="user_name" required placeholder='What is your name?' />
-          <FontAwesomeIcon aria-aria-hidden="true" className='icon' icon="fa-solid fa-user" />
         </div>
         <div className='form-email'>
           <label >Email </label>

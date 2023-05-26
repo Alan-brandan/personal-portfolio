@@ -5,9 +5,9 @@ import Pdf from '../../assets/documents/resume.pdf';
 import ProfilePic from '../../assets/img/profile.png';
 const AboutBanner = (props,ref) => {
 
-  let text = ["I'm a web developer from Argentina with a passion for creating ", <span> dynamic, entertaining user experiences.</span>,<br />, "I enjoy the process of turning ideas into reality using creative solutions.", <br />, <br />,
-    "I'm also an independant game developer using the Unity engine along with C#. This experience provides me with a solid foundation of ", <span>Object Oriented Programming</span>, " and a familiarity with ", <span>SOLID principles</span>, ".", <br />, <br />,
-    "I'm a self-taugh and curious person by nature, as well as someone with many fields of interest and creative pursuits ", <br />, <br />,
+  let text = ["I'm a web developer from Argentina with a passion for creating ", <span key='span1'> dynamic, entertaining user experiences.</span>,<br key='br1'/>, "I enjoy the process of turning ideas into reality using creative solutions.", <br key='br2' />, <br key='br3' />,
+    "I'm also an independant game developer using the Unity engine along with C#. This experience provides me with a solid foundation of ", <span key='span2'>Object Oriented Programming</span>, " and a familiarity with ", <span key='span3'>SOLID principles</span>, ".", <br key='br4'/>, <br key='br5' />,
+    "I'm a self-taugh and curious person by nature, as well as someone with many fields of interest and creative pursuits ", <br key='br6' />, <br key='br7' />,
     "Other than coding, I love making CAD designs, drawing and learning new things."];
 
   return (
