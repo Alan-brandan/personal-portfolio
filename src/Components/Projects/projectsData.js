@@ -15,7 +15,7 @@ const projects = [
         category:"Web",
         desc: "Note managing app made with React, Spring boot and Mysql",
         image: require("../../assets/img/project2.png"),
-        link: "/",
+        link: "https://challenge-ensolvers.vercel.app/",
         repo: "https://challenge-ensolvers.vercel.app/"
     },
     {
