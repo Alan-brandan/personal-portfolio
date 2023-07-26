@@ -1,9 +1,9 @@
-import React,{forwardRef}from 'react'
+import React, { forwardRef } from 'react'
 import './MainBanner.css';
 import { motion } from "framer-motion";
 import Typewriter from 'typewriter-effect';
 
-const MainBanner = (props,ref) => {
+const MainBanner = (props, ref) => {
 
   return (
     <div className='header-container' ref={ref}>
@@ -15,13 +15,13 @@ const MainBanner = (props,ref) => {
             I'm&nbsp;
             <Typewriter
               options={{
-                strings: ['a Fullstack Developer', 'a Game Developer','an Artist'],
+                strings: ['a Fullstack Developer', 'a Game Developer', 'an Artist'],
                 autoStart: true,
                 loop: true,
-                cursor:"_",
-                delay:90,
+                cursor: "_",
+                delay: 90,
                 deleteSpeed: 80,
-                pauseFor:1900,
+                pauseFor: 1900,
               }}
             />
           </h2>
@@ -31,7 +31,6 @@ const MainBanner = (props,ref) => {
           <div className='scroll_icon'><span></span></div>
         </div>
       </div>
-      <div className='home_divider'></div>
     </div>
   )
 }

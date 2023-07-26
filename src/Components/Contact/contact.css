@@ -1,25 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-.divider-contact {
-
-    padding-top: 15.5%;
-    margin-top: -15.9%;
-    background-color: #242327;
-    z-index: 2;
-    content: "";
-    width: 100%;
-    height: auto;
-    -webkit-clip-path: polygon(0, 0% 100%, 100% 0);
-    clip-path: polygon(100% 100%, 0 100%, 0% 0);
-}
-
-
-
-
 .contact-container {
+    clip-path: polygon(0% 0%, 0 100%, 100% 100%, 100% 40%);
     background-color: #242327;
-    padding: 0 0 5rem 0;
+    padding: 16rem 0 10rem 0;
+    margin-top: -16%;
+    
 }
 
 .contact-section {
