@@ -5,7 +5,7 @@
     clip-path: polygon(0% 0%, 0 100%, 100% 100%, 100% 40%);
     background-color: #242327;
     padding: 16rem 0 10rem 0;
-    margin-top: -16%;
+    margin-top: -22.5%;
     
 }
 
@@ -113,7 +113,10 @@
 
 @media (max-width: 600px) {
     .contact-container {
+        clip-path: polygon(0% 0%, 0 100%, 100% 100%, 100% 10%);
         width: 100%;
+        padding: 3rem 0 33rem 0;
+        margin-top: -6.5rem;
     }
     .contact-section {
       flex-direction: column;
@@ -141,6 +144,12 @@
     }
   }
   @media (min-device-width: 601px) and (max-width: 1200px) {
+    .contact-container {
+        clip-path: polygon(0% 0%, 0 100%, 100% 100%, 100% 15%);
+        width: 100%;
+        padding: 3rem 0 38rem 0;
+        margin-top: -9rem;
+    }
     .contact-section {
       flex-direction: column;
       width: 70%;
