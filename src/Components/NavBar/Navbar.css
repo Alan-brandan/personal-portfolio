@@ -43,7 +43,7 @@ top: 17px;
   top: 0;
   height: 57px;
   width: 100%;
-  z-index: 9999;
+  z-index: 900;
 }
 
 .navbar {
@@ -89,7 +89,6 @@ top: 17px;
 
 
 /*sections*/
-
 .navbar_items {
   display: flex;
   align-items: center;
@@ -134,6 +133,13 @@ top: 17px;
   opacity: 1;
   color: #fff;
 }
+
+.proj-modal-images{
+  display: flex;
+  flex-direction: column;
+}
+
+
 
 @media (max-width: 1199px) {
 

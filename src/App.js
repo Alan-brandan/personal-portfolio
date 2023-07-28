@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import projectsData from './Components/Projects/projectsData';
-import React, { useState,useRef } from 'react';
+import React, { useState, useRef } from 'react';
 const allCategories = ['all', 'Web', 'Games', 'Other'];
 
 function App() {
@@ -42,13 +42,15 @@ function App() {
   return (
     <div className="App">
 
-      <Navbar homRef={homeRef} projRef={projectsRef} abouRef ={aboutRef} contRef={contactRef} skiRef={skillsRef}/>
-      <MainBanner ref={homeRef}/>
-      <AboutBanner ref={aboutRef}/>
-      <Skills ref={skillsRef}/>
-      <Gallery categories={categories} filterItems={filterItems} items={menuItems} ref={projectsRef}/>
+
+      <Navbar homRef={homeRef} projRef={projectsRef} abouRef={aboutRef} contRef={contactRef} skiRef={skillsRef} />
+      <MainBanner ref={homeRef} />
+      <AboutBanner ref={aboutRef} />
+      <Skills ref={skillsRef} />
+      <Gallery categories={categories} filterItems={filterItems} items={menuItems} ref={projectsRef} />
       <Contact ref={contactRef} />
-      <Footer/>
+      <Footer />
+
 
 
 
