@@ -33,7 +33,7 @@ const Gallery = ({ items, filterItems }, ref) => {
   const handleCardClick = (menuitem) => {
     if (isClickEvent) {
       //setOpenModal(true); //modal not implemented yet
-      setCurrentProject(menuitem); // Set the correct project here
+      setCurrentProject(menuitem);
     } else {
       setIsClickEvent(true);
     }
@@ -92,6 +92,7 @@ const Gallery = ({ items, filterItems }, ref) => {
                 <div className="proj-info">
                   <h4>{title}</h4>
                   <p>{desc}</p>
+                  <h5>Read more</h5>
                 </div>
               </motion.div>
             );
