@@ -1,6 +1,5 @@
 import "./Gallery.css";
 import React, { useState, useEffect, useRef } from "react";
-import { forwardRef } from "react";
 import { motion } from "framer-motion";
 import projects from "./projectsData";
 import Modal from "../Modal";
@@ -9,6 +8,40 @@ import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 const Gallery = ({ items, filterItems }, ref) => {
   const [isClickEvent, setIsClickEvent] = useState(false);
   const dragStartPositionRef = useRef({ x: 0, y: 0 });
+  const [currentProject, setCurrentProject] = useState([]);
+  const [openModal, setOpenModal] = useState(false);
+  const popupRef = useRef(null);
+  const carouselRef = useRef(null);
+
+  const [carouselLeftContraint, setcarouselLeftContraint] = useState(0);
+
+  useEffect(() => {
+    const updateCarouselLeftContraint = () => {
+      const newContraint =
+        -carouselRef.current?.parentElement?.clientWidth * 0.605 -
+        15 * (carouselRef.current?.childNodes?.length + 1);
+      setcarouselLeftContraint(newContraint);
+    };
+
+    updateCarouselLeftContraint();
+
+    window.addEventListener("resize", updateCarouselLeftContraint);
+    return () => {
+      window.removeEventListener("resize", updateCarouselLeftContraint);
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log(carouselLeftContraint);
+  }, [carouselLeftContraint]);
+
+  useEffect(() => {
+    if (openModal) {
+      popupRef.current && disableBodyScroll(popupRef.current);
+    } else {
+      popupRef.current && enableBodyScroll(popupRef.current);
+    }
+  }, [openModal]);
 
   const handleDragStart = (event) => {
     setIsClickEvent(false);
@@ -39,25 +72,12 @@ const Gallery = ({ items, filterItems }, ref) => {
     }
   };
 
-  const [currentProject, setCurrentProject] = useState([]);
-
-  const [openModal, setOpenModal] = useState(false);
-  const popupRef = useRef(null);
-
-  useEffect(() => {
-    if (openModal) {
-      popupRef.current && disableBodyScroll(popupRef.current);
-    } else {
-      popupRef.current && enableBodyScroll(popupRef.current);
-    }
-  }, [openModal]);
-
   return (
     <div className="projects-container">
       <div className="projects-section" ref={ref}>
         <div className="proj-header">
           <h2>Projects</h2>
-          <p>Some of the projects i made</p>
+          <p>Some Things I’ve Built</p>
         </div>
         <div className="filter-container">
           <button onClick={() => filterItems("All")}>All</button>
@@ -69,14 +89,19 @@ const Gallery = ({ items, filterItems }, ref) => {
       <div className="projects-carousel">
         <motion.div
           className="inner-carousel"
+          id="carousel"
           drag="x"
-          dragConstraints={{ right: 0, left: -1190 }}
+          dragConstraints={{
+            right: 0,
+            left: carouselLeftContraint,
+          }}
           whileTap={{ cursor: "grabbing" }}
           onDragStart={handleDragStart}
           onDragEnd={(event) => handleDragEnd(event, currentProject)}
+          ref={carouselRef}
         >
           {items.map((menuitem, i) => {
-            const { id, title, thumb, desc, date } = menuitem;
+            const { id, title, thumb, summary } = menuitem;
 
             return (
               <motion.div
@@ -90,8 +115,8 @@ const Gallery = ({ items, filterItems }, ref) => {
               >
                 <motion.img src={thumb} alt={title} />
                 <div className="proj-info">
-                  <h4>{title}</h4>
-                  <p>{desc}</p>
+                  <h4> {title} </h4>
+                  <p>{summary}</p>
                   <h5>Read more</h5>
                 </div>
               </motion.div>
@@ -151,4 +176,4 @@ const Gallery = ({ items, filterItems }, ref) => {
   );
 };
 
-export default forwardRef(Gallery);
+export default React.forwardRef(Gallery);
